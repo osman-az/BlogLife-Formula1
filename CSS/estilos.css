@@ -1,0 +1,305 @@
+/* IMPORTACIONES */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+/* +++SMACSS: */
+/* Estructura de Diseño: Tiny Tweaks */
+/* GENERAL */
+body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0
+}
+/* HEADER */
+header {
+    padding: 0;
+    height: 64px;
+    background: #001016;
+    display: grid;
+    
+    /* Header: 10 Columnas */
+    grid-template-columns: 0.1fr repeat(6, 1fr) 10fr 1fr 0.10fr;
+    grid-template-rows: 0.1fr 0.75fr 0.10fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+}
+/* Elementos del Header */
+header > div:nth-child(1){
+    background: url(../IMG/NAV_ICONS/1facebook.png) center center/contain no-repeat content-box;
+    padding: 8%;
+    grid-area: 2 / 2 / 3 / 3;
+}
+header > div:nth-child(1):hover{
+    background: url(../IMG/NAV_ICONS/1facebook-red.png) center center/contain no-repeat content-box;
+}
+header > div:nth-child(2){
+    background: url(../IMG/NAV_ICONS/2instagram.png) center center/contain no-repeat content-box;
+    padding: 8%;
+    grid-area: 2 / 3 / 3 / 4;
+}
+header > div:nth-child(2):hover{
+    background: url(../IMG/NAV_ICONS/2instagram-red.png) center center/contain no-repeat content-box;
+}
+header > div:nth-child(3){
+    background: url(../IMG/NAV_ICONS/3snapchat.png) center center/contain no-repeat content-box;
+    padding: 8%;
+    grid-area: 2 / 4 / 3 / 5;
+}
+header > div:nth-child(3):hover{
+    background: url(../IMG/NAV_ICONS/3snapchat-red.png) center center/contain no-repeat content-box;
+}
+header > div:nth-child(4){
+    background: url(../IMG/NAV_ICONS/4flickr.png) center center/contain no-repeat content-box;
+    padding: 8%;
+    grid-area: 2 / 5 / 3 / 6;
+}
+header > div:nth-child(4):hover{
+    background: url(../IMG/NAV_ICONS/4flickr-red.png) center center/contain no-repeat content-box;
+}
+header > div:nth-child(5){
+    background: url(../IMG/NAV_ICONS/5twitter.png) center center/contain no-repeat content-box;
+    padding: 8%;
+    grid-area: 2 / 6 / 3 / 7;
+}
+header > div:nth-child(5):hover{
+    background: url(../IMG/NAV_ICONS/5twitter-red.png) center center/contain no-repeat content-box;
+}
+header > div:nth-child(6){
+    background: url(../IMG/NAV_ICONS/6linkedin.png) center center/contain no-repeat content-box;
+    padding: 8%;
+    grid-area: 2 / 7 / 3 / 8;
+}
+header > div:nth-child(6):hover{
+    background: url(../IMG/NAV_ICONS/6linkedin-red.png) center center/contain no-repeat content-box;
+}
+header > div:nth-child(7){
+    background: url(../IMG/NAV_ICONS/7search.png) center center/contain no-repeat content-box;
+    padding: 8%;
+    grid-area: 2 / 9 / 3 / 10;
+}
+header > div:nth-child(7):hover{
+    background: url(../IMG/NAV_ICONS/7search-red.png) center center/contain no-repeat content-box;
+}
+
+/* Componentes Re-usables */
+.nav-icons{
+    border-radius: 3px;
+    transition: all 0.5s 0s ease;
+    cursor: pointer;
+}
+.nav-icons:hover{
+    transform: scale(1.05);
+}
+
+/* MAIN */
+main {
+    height: 2320px;
+    display: grid;
+    
+    /* Main: 3 Columnas */
+    grid-template-columns: 0.05fr 1fr 0.05fr;
+    grid-template-rows: 0.25fr 0.75fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+#section-title{
+    grid-area: 1 / 1 / 2 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#section-title > h1{
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 600;
+}
+#section-title > div{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#section-title > div > p:last-child{
+    background-color: black;
+    color: white;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+#section-banner{
+    background: url(../IMG/banner-img2.jpg) center center/cover no-repeat content-box;
+    grid-area: 2 / 1 / 3 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#section-banner > h2:first-child{
+    font-size: 3em;
+    font-weight: 600;
+    margin-left: 3%;
+    color: white;
+}
+#section-banner > h2:nth-child(2){
+    text-transform: uppercase;
+    font-size: 5em;
+    font-weight: 600;
+    margin-left: 3%;
+    color: white;
+}
+#section-banner > button {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 15%;
+    height: 8%;
+    border-width: 1px;
+    color: rgba(0, 0, 0, 0.28);
+    border-color: rgba(184, 180, 180, 0.55);
+    border-radius: 3px;
+    box-shadow: inset 0px -3px 7px 0px rgba(224, 225, 226, 1);
+    text-shadow: inset 0px 1px 0px #263666;
+    background: rgba(184, 180, 180, 0.55);
+    transition: all 0.7s 0.2s ease;
+    margin-left: 3%;
+    cursor: pointer;
+}
+#section-banner > button:hover {
+    background: rgba(136, 141, 144, 1)
+}
+#section-blog {
+    grid-area: 3 / 2 / 4 / 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.33fr 1fr 0.50fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+#section-blog > div:nth-child(1){
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#section-blog > div:nth-child(1) > h3{
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 600;
+}
+#section-blog > div:nth-child(1) > h4{
+    font-weight: 300;
+}
+#section-blog > div:nth-child(2){
+    background: url(../IMG/blog1-img.jpg) center center/cover no-repeat content-box;
+    grid-area: 2 / 1 / 3 / 2;
+}
+#section-blog > div:nth-child(3){
+    grid-area: 3 / 1 / 4 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#section-blog > div:nth-child(3) > p{
+    text-align: justify;
+}
+
+/* FOOFTER */
+footer{
+    height: 10vh;
+    background-color: #001016;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+footer > p{
+    font-weight: 300;
+    color: white;
+}
+footer > p > strong{
+    color: #f10921;
+}
+footer > div{
+    background: #001016 url(../IMG/OSMÁN.gif) center center/cover no-repeat;
+    width: 6%;
+    height: 59%;
+}
+
+@media (max-width: 500px) {
+
+    /* HEADER */
+    header {
+        display: none;
+    }
+
+    /* MAIN */
+    main {
+        grid-template-rows: 0.20fr 0.44fr 1fr;
+    }
+    #section-title>h1 {
+        font-size: 2.5em;
+    }
+    #section-title>div {
+        width: 49%;
+    }
+    #section-banner>h2:first-child {
+        font-size: 2em;
+        margin-left: 5%;
+    }
+
+    #section-banner>h2:nth-child(2) {
+        text-transform: uppercase;
+        font-size: 3em;
+        margin-left: 5%;
+    }
+    #section-banner > button {
+        
+        font-size: 1.2em;
+        width: 31%;
+        height: 10%;
+        margin-left: 5%;
+    }
+    #blog {
+        grid-template-rows: 0.15fr 0.25fr 0.50fr;
+    }
+}
+
+
+@media (max-width: 1024px) and (min-width: 800px) {
+
+    /* HEADER */
+    header {
+        height: 36px;
+    }
+
+    #section-title>h1 {
+        font-size: 3em;
+    }
+
+    #section-title>div {
+        width: 31%;
+    }
+
+    #section-banner>h2:first-child {
+        font-size: 2em;
+        margin-left: 3%;
+    }
+
+    #section-banner>h2:nth-child(2) {
+        text-transform: uppercase;
+        font-size: 4em;
+        margin-left: 3%;
+    }
+
+    footer>div {
+        width: 16%;
+        height: 84%;
+    }
+
+}
