@@ -11,3 +11,8 @@ I have created a Frontend Web, using responsive design frameworks and CSS method
 2. In the style sheet *(based on the previous point)* is what is necessary to generate the mobile view of said template.
 
 3. The style sheet is written under one of the CSS writing methodologies **(+++SMACSS)**.
+
+### Technologies:
+                    
+| ![HTML 5](https://i.imgur.com/QmbHEsR.png "HTML 5") HTML 5 | ![CSS 3](https://i.imgur.com/O6lJ8iB.png "CSS 3") CSS 3
+| ------------- | ------------- |
